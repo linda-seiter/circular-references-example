@@ -82,4 +82,4 @@ class Movie(db.Model, SerializerMixin):
     reviews = db.relationship('Review', back_populates="movie")
     
     def __repr__(self):
-        return f"<Movie {self.id}, {self.title}, {self.year}>"
+        return f"<Movie {self.id}, {self.title}, {self.year} created by {self.creator}>"
